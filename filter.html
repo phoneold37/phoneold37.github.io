@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+function myFunction() {
+  const { value } = document.querySelector('#myInput');
+  document.querySelectorAll('#myTable td').forEach((td) => {
+    td.parentElement.style.display =
+    (!value || td.textContent === value)
+    ? ''
+    : 'none';
+  });
+}
+</script>    
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for counts">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:50%;">Counts</th>
+  </tr>
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>111</td>
+  </tr>
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>20</td>
+  </tr>
+</table>
+
+</html>
